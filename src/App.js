@@ -1,10 +1,20 @@
 
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { ProjectRoutes } from './routes/ProgectRoutes';
+import { persistor, store } from './store';
 import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-    </div>
+
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <ProjectRoutes />
+      </PersistGate>
+    </Provider>
+
   );
 }
 

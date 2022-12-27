@@ -1,0 +1,23 @@
+
+
+.form_input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 48px;
+    padding: 0 50px 0 16px;
+    margin-top: 8px;
+    background: #F8F8F8;
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0;
+    color: #808185;
+    border-radius: 8px;
+}
+.input_border{
+    border: none;
+}
+
+.input_border_err{
+    border: 1px solid rgba(255, 97, 97, 1);
+}
