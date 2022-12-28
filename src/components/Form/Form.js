@@ -1,7 +1,7 @@
 
 import { Field, reduxForm } from 'redux-form'
 import { required, verifyConfirmationPass, verifyEmail } from '../../utils/validators'
-import { InputForm } from '../InputForm/InputForm'
+import { InputForm } from '../UI/InputForm/InputForm'
 import styles from './Form.module.css'
 import classNames from 'classnames'
 
@@ -37,7 +37,7 @@ const Form = (props) => {
 
             <div className={styles.form_item}>
                 <label className='font_text' htmlFor='pass'>Пароль</label>
-                <Field className={classNames(styles.form_input, styles.form_pass)}
+                <Field
                     name='pass'
                     component={InputForm}
                     validate={required}
@@ -48,7 +48,7 @@ const Form = (props) => {
 
             <div className={styles.form_item}>
                 <label className='font_text' htmlFor='confirm'>Подтвердите пароль</label>
-                <Field className={classNames(styles.form_input, styles.form_pass)}
+                <Field
                     name='confirm'
                     component={InputForm}
                     type='password'

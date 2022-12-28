@@ -12,13 +12,8 @@ export const LogIn = () => {
 
     const handleUserAuth = async (values) => {
 
-        console.log(values);
-        // if (values.pass !== values.confirm) {
-
-        //     return
-        // }
         await dispatch(LoginUserThunk(values.email, values.pass))
-        navigate('/users')
+        navigate('/')
     }
 
 

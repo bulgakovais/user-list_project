@@ -8,11 +8,7 @@
     flex-direction: column;
     padding: 8px 0;
 }
-.form_pass{
-    background-image: url('../../img/eye.png');   
-    background-repeat: no-repeat;  
-    background-position: 465px; 
-}
+
 .form_btn{
     display: flex;
     align-items: center;

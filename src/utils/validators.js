@@ -14,9 +14,6 @@ export const verifyEmail = (value) => {
         return 'Ошибка'
     }
 }
-export const verifyPass = (value, allInputs) => {
-    return value === allInputs.confirm ? undefined : 'Ошибка';
-}
 
 export const verifyConfirmationPass = (value, allInputs) => {
     return value === allInputs.pass ? undefined : 'Ошибка';
