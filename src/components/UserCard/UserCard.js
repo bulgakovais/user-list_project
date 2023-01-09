@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { getUsers } from '../../store/users/actions';
@@ -11,10 +11,12 @@ export const UserCard = () => {
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const [likesUser, setLikesUser] = useState([])
     const users = useSelector(selectUsers)
 
     useEffect(() => {
         dispatch(getUsers())
+        setLikesUser(getLikesFromLocatStorage())
     }, [])
 
 
@@ -60,10 +62,13 @@ export const UserCard = () => {
                 </div>
                 <div className={styles.heartContainer}>
                     <div className={styles.heartBorder}>
-
-                        <i className="fa fa-heart-o" aria-hidden="true"
-                            onClick={(event) => clickLikesHandler(user.id, event)}>
-                        </i>
+                        {likesUser.find(el => el.id === user.id) ?
+                            <i className="fa fa-heart" aria-hidden="true"
+                                onClick={(event) => clickLikesHandler(user.id, event)}>
+                            </i> :
+                            <i className="fa fa-heart-o" aria-hidden="true"
+                                onClick={(event) => clickLikesHandler(user.id, event)}>
+                            </i>}
 
                     </div>
                 </div>
