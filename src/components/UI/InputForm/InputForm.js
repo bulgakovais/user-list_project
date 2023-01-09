@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 
 export const InputForm = ({ input, meta, ...props }) => {
-    console.log(props);
+    // console.log(props);
     const hasError = meta.touched && meta.error
     return (
         <>

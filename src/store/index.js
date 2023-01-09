@@ -4,6 +4,8 @@ import thunk from "redux-thunk";
 import storage from "redux-persist/lib/storage";
 import { userAuthReducer } from "./userAuth/reducer";
 import { reducer as formReducer } from 'redux-form'
+import { usersReducer } from "./users/reducer";
+import { userReducer } from "./user/reducer";
 
 
 
@@ -16,7 +18,9 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
     auth: userAuthReducer,
-    form: formReducer
+    form: formReducer,
+    userList: usersReducer,
+    user: userReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

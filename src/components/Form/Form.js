@@ -30,7 +30,7 @@ const Form = (props) => {
                     name='email'
                     type='email'
                     component={InputForm}
-                    placeholder='example@mail.ru'
+                    placeholder='eve.holt@reqres.in'
                     validate={[required, verifyEmail]}
                 />
             </div>

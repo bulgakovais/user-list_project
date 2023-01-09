@@ -1,14 +1,18 @@
 import { Route, Routes } from "react-router-dom"
 import { LoginPage } from "../../pages/LogInPage"
 import { MainPage } from '../../pages/MainPage'
-// import { UserPage } from '../../pages/UserPage'
+import { UserPage } from '../../pages/UserPage'
+import { ProtectedRoute } from "../ProtectedRoutes"
 
 export const ProjectRoutes = () => {
     return (
         <Routes>
-            <Route path='/' element={<MainPage />} />
-            {/* <Route path='/user' element={<UserPage />} /> */}
-            <Route path='/login' element={<LoginPage />} />
+            <Route element={<ProtectedRoute />}>
+                <Route path='/users' element={<MainPage />} />
+                <Route path='/users/:id' element={<UserPage />} />
+            </Route>
+
+            <Route path='/' element={<LoginPage />} />
         </Routes>
     )
 }

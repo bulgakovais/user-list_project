@@ -1,4 +1,4 @@
-import { LOGIN_USER, LOGIN_ERROR } from "./actions"
+import { LOGIN_USER, LOGIN_ERROR, LOGOUT_USER } from "./actions"
 
 const initialState = {
     user: null,
@@ -12,9 +12,14 @@ export const userAuthReducer = (state = initialState, action) => {
                 user: action.payload
             }
         }
+        case (LOGOUT_USER): {
+            return {
+                user: null
+            }
+        }
         case (LOGIN_ERROR): {
             return {
-                ...state,
+                user: null,
                 errors: action.payload
             }
         }

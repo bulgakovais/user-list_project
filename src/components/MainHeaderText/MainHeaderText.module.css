@@ -3,6 +3,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    margin-top: -10px;
 }
 
 .header_H1{
@@ -12,7 +13,7 @@
 
 .header_H2{
     color: white;
-    width: 57%;
+    width: 820px;
     text-align: center;
    
 }
@@ -30,6 +31,13 @@
         margin: 0;
     }
     .header_text{
-        padding: 0 20px;
+        padding: 20px;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 375px){
+    .header_text{
+        margin-top: -10px;
     }
 }

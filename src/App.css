@@ -47,6 +47,9 @@ margin-top: 4px;
   border-radius: 8px;
 }
 
+.fa-heart{
+  color: #512689;
+}
 
 @media (max-width: 820px){
   .font_H1{

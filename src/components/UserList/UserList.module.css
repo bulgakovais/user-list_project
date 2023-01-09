@@ -1,0 +1,22 @@
+
+
+.container{
+    flex-wrap: wrap;
+    padding: 48px 80px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media(min-width: 1440px){
+    .container{
+        justify-content: start;
+    }
+}
+
+@media(max-width:375px){
+    .container{
+       padding: 0;
+       margin-bottom: 35px;
+    }
+}

@@ -1,4 +1,7 @@
 export * from './LogIn/LogIn'
 export * from './Users/Users'
+export * from './UserCard/UserCard'
 export * from './Form/Form'
 export * from './Header/Header'
+export * from './UserDescription/UserDescription'
+export * from './UserHeaderText/UserHeaderText'
