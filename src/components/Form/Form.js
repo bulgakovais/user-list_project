@@ -1,7 +1,7 @@
 
 import { Field, reduxForm } from 'redux-form'
 import { required, verifyConfirmationPass, verifyEmail } from '../../utils/validators'
-import { InputForm } from '../UI/InputForm/InputForm'
+import { InputForm } from '../index'
 import styles from './Form.module.css'
 import classNames from 'classnames'
 

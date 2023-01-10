@@ -11,8 +11,8 @@ export const UserCard = () => {
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const [likesUser, setLikesUser] = useState([])
     const users = useSelector(selectUsers)
+    const [likesUser, setLikesUser] = useState([])
 
     useEffect(() => {
         dispatch(getUsers())
@@ -20,6 +20,13 @@ export const UserCard = () => {
     }, [])
 
 
+    /** 
+       * Вызывает функцию,записывающую лайк в localStorage 
+       * Вызывает ф-ю для изменения отображения лайка (toggleLikes)
+       * @param {object} event - событие click
+       * @param {string} userId - id пользователя, на котором произошло событие click
+       * @param {object} likes - все объкеты лайков в  localStorage
+       */
     const clickLikesHandler = (userId, event) => {
         const likes = getLikesFromLocatStorage()
         const targetHeartElement = event.target
@@ -30,8 +37,14 @@ export const UserCard = () => {
 
     }
 
+    /** 
+      * Изменяет значок лайка на карточке пользователя на противоположный
+      * Обновляет localStorage
+      * @param {object} targetHeartElement - объект, на котором произошло событие click
+      * @param {string} userId - id пользователя, на котором произошло событие click
+      * @param {object} likes - все объкеты лайков в  localStorage
+      */
     const toggleLikes = (likes, targetHeartElement, userId) => {
-        console.log('targetHeartElement: ', targetHeartElement);
 
         if (targetHeartElement.classList.contains('fa-heart')) {
             targetHeartElement.classList.remove('fa-heart')

@@ -28,6 +28,15 @@ export const LoginUserThunk = (email, pass) => async (dispatch) => {
         password: pass
     }
 
+    /** 
+       * Отправляет запрос к API
+       * Регистрирует пользователя, в ответ приходит token и id
+       * Записывает в localStorage токен
+       * Передает в стор пользователя {token и id} || ошибку
+       * @param {string} email - email пользователя
+       * @param {string} pass - пароль пользователя
+       * @param {object} body - тело запроса
+       */
     try {
         await axios.post(logInURL, body)
             .then((responce) => {
@@ -41,13 +50,16 @@ export const LoginUserThunk = (email, pass) => async (dispatch) => {
             })
     } catch (err) {
         console.log('errLogIn: ', err);
-        alert('Воспользуйтесь следующим тестовым аккаунтом: Email:"eve.holt@reqres.in", пароль:"pistol"')
+        alert('Воспользуйтесь следующим тестовым аккаунтом: Email:"eve.holt@reqres.in"')
         dispatch(setErrorLogin(err.message))
     }
 
 }
 
+
+/** 
+    * Удаляет пользователя из стора
+    */
 export const logOutUserAction = (dispatch) => {
     dispatch(logOutUser());
-    // dispatch(clearAccount());
 };

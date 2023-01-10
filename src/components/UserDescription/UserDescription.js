@@ -3,8 +3,11 @@ import { userDescriprion_1, userDescriprion_2, userDescriprion_3 } from "../../s
 import telephone from '../../img/telephon.png'
 import email from '../../img/email.png'
 
-export const UserDescription = () => {
 
+/** 
+    * Компонент отображения описания пользователя
+    */
+export const UserDescription = () => {
 
     return (
         <div className={styles.container}><div className={styles.description}>

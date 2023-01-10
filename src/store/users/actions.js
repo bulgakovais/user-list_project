@@ -16,7 +16,11 @@ export const setErrorUsers = (error) => ({
     payload: error
 })
 
-
+/** 
+       * Отправляет запрос к API
+       * Получает список пользователей
+       * Передает в стор список || ошибку
+       */
 export const getUsers = () => async (dispatch) => {
     try {
         await axios.get(usersURL)
