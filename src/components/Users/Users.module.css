@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.btn_user_list{
+    color: black;
+    border: 1px solid black;
+    background-color: transparent;
+    padding: 8px 17px;
+    border-radius: 8px;
+}
+
+.img{
+    margin-left: 10px;
+}
+
+
+@media(max-width:375px){
+    .container{
+        margin: 32px 35px;
+    }
+}

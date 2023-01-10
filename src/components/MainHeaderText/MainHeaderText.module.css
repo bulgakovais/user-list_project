@@ -1,0 +1,43 @@
+.header_text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -10px;
+}
+
+.header_H1{
+    color: white;
+    margin: 0 0 10px;
+}
+
+.header_H2{
+    color: white;
+    width: 820px;
+    text-align: center;
+   
+}
+
+
+@media (max-width: 820px){
+    .header_H1{
+        color: #F8F8F8;
+        margin: 0 0 16px;
+    }
+    .header_H2{
+        width: 100%;
+        color: #F8F8F8;
+        line-height: 19px;
+        margin: 0;
+    }
+    .header_text{
+        padding: 20px;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 375px){
+    .header_text{
+        margin-top: -10px;
+    }
+}
