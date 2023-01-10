@@ -1,4 +1,5 @@
 import styles from './UserDescription.module.css'
+import classNames from 'classnames'
 import { userDescriprion_1, userDescriprion_2, userDescriprion_3 } from "../../store/storeConstants"
 import telephone from '../../img/telephon.png'
 import email from '../../img/email.png'
@@ -20,7 +21,7 @@ export const UserDescription = () => {
                     <p>+7 (954) 333-44-55</p>
                 </div>
                 <div className={styles.contacts}>
-                    <img className={styles.contactsImg} src={email} />
+                    <img className={classNames(styles.contactsImg, styles.imgEmail)} src={email} />
                     <p>sykfafkar@gmail.com</p>
                 </div>
             </div>
