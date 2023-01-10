@@ -46,11 +46,8 @@
    
 }
 
-@media(max-width: 375px){
-    /* .container{
-        height: 412px;
-        padding:0;
-    } */
+@media(max-width: 475px){
+   
     .imgExit{
         display: flex;
         padding: 23px 27px 20px 0;

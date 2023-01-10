@@ -16,15 +16,19 @@
 .contactsImg{
     height: 20px;
     width: 20px;
-    margin: 15px 10px 0 0 ;
+    margin: 18px 10px 0 0 ;
 }
+.imgEmail{
+    height: 15px;
+}
+
 
 .paragraph{
     margin-bottom: 20px;
 }
 
 
-@media(max-width:375px){
+@media(max-width:475px){
     .container{
         flex-direction: column-reverse;
         padding: 16px;
