@@ -1,11 +1,11 @@
 
-
+/** 
+       * Получает список лайков из localStorage
+       * @return {Array} likes - список лайков из localStorage
+       */
 export function getLikesFromLocatStorage() {
-    let likes = []
-    const favorite = localStorage.getItem('likes')
 
-    likes = JSON.parse(favorite)
-    console.log('likes: ', likes);
+    const likes = JSON.parse(localStorage.getItem('likes'))
 
     if (Array.isArray(likes)) {
         return likes
@@ -13,6 +13,12 @@ export function getLikesFromLocatStorage() {
 }
 
 
+/** 
+       * Записывает новый лайк в localStorage
+       * @param {string} userId - id пользователя, на котором произошел click
+       * @param {Array} likes - список всех лайков из localStorage
+       * @return {Array} likes - обновленный список лайков
+       */
 export function setLikeFromLocalStorage(userId, likes) {
     const user = { id: userId }
     const overlap = likes.find(el => el.id === user.id)

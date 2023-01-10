@@ -1,8 +1,7 @@
 import { Route, Routes } from "react-router-dom"
-import { LoginPage } from "../../pages/LogInPage"
-import { MainPage } from '../../pages/MainPage'
-import { UserPage } from '../../pages/UserPage'
+import { LoginPage, MainPage, UserPage } from "../../pages"
 import { ProtectedRoute } from "../ProtectedRoutes"
+
 
 export const ProjectRoutes = () => {
     return (

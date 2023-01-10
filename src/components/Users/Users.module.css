@@ -4,7 +4,13 @@
     align-items: center;
     margin-bottom: 70px;
 }
-
+.containerCard{
+    flex-wrap: wrap;
+    padding: 48px 80px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 .btn_user_list{
     color: black;
     border: 1px solid black;
@@ -17,9 +23,18 @@
     margin-left: 10px;
 }
 
+@media(min-width: 1440px){
+    .containerCard{
+        justify-content: start;
+    }
+}
 
 @media(max-width:375px){
     .container{
         margin: 32px 35px;
     }
+    .containerCard{
+        padding: 0;
+        margin-bottom: 35px;
+     }
 }
