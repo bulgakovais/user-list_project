@@ -25,6 +25,9 @@
 .imgArr{
     display: none;
 }
+.imgArr:hover, .imgExit:hover{
+    transform: scale(1.1);
+}
 .displayNone{
     display: none;
 }

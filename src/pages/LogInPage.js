@@ -1,9 +1,9 @@
 import { LogIn } from "../components"
 
 /** 
-    * Компонент страницы с формой регистрации
+    * Компонент страницы авторизации
     */
-export const LoginPage = () => {
+export const LogInPage = () => {
     return <>
         <LogIn />
     </>

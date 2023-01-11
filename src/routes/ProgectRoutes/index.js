@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import { LoginPage, MainPage, UserPage } from "../../pages"
+import { SignUpPage, MainPage, UserPage, LogInPage } from "../../pages"
 import { ProtectedRoute } from "../ProtectedRoutes"
 
 
@@ -11,7 +11,8 @@ export const ProjectRoutes = () => {
                 <Route path='/users/:id' element={<UserPage />} />
             </Route>
 
-            <Route path='/' element={<LoginPage />} />
+            <Route path='/' element={<SignUpPage />} />
+            <Route path='/auth' element={<LogInPage />} />
         </Routes>
     )
 }

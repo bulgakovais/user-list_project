@@ -23,3 +23,16 @@
     border-radius: 8px;
     margin-top: 16px;
 }
+.form_btn:hover{
+    background-color: #7036bb;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    margin: 10px;
+}
+.link:hover{
+    text-decoration: underline;
+}
