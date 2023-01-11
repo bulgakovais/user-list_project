@@ -39,6 +39,12 @@
     color: #F8F8F8;
 
 }
+
+.my_btn:hover{
+    background-color:#401d6b;
+}
+
+
 @media (max-width: 820px){
    .container{
        padding: 0;
