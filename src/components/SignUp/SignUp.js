@@ -14,8 +14,6 @@ export const SignUp = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const isAuth = useSelector(getIsAuth)
-    console.log('isAuth SignUp: ', isAuth);
-
 
     /** 
   * Перенаправляет на MainPage при регистрации

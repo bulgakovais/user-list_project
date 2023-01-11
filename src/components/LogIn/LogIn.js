@@ -14,7 +14,6 @@ export const LogIn = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const isAuth = useSelector(getIsAuth)
-    console.log('isAuth: ', isAuth);
 
     /** 
      * Перенаправляет на MainPage при авторизации

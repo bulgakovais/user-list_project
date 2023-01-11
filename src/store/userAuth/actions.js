@@ -57,7 +57,6 @@ export const LoginUserThunk = (email, pass) => async (dispatch) => {
                         token: responce.data.token,
                         id: nanoid()
                     }
-                    console.log(user);
                     localStorage.setItem('token', responce.data.token)
 
                     dispatch(logInUser(user));
@@ -96,7 +95,6 @@ export const SignUpUserThunk = (email, pass) => async (dispatch) => {
     try {
         await axios.post(signUpURL, body)
             .then((responce) => {
-                console.log(responce);
                 const user = {
                     token: responce.data.token,
                     id: responce.data.id
